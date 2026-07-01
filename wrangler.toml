@@ -45,4 +45,4 @@ vars = { ENVIRONMENT = "production" }
 
 [env.development]
 name = "flytrip-visa-ai-dev"
-vars = { ENVIRONMENT = "development" };
+vars = { ENVIRONMENT = "development" }
