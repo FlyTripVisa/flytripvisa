@@ -1,0 +1,70 @@
+{
+  // Cloudflare Workers Configuration
+  "name": "flytripvisa",
+  "main": "src/index.js",
+  "type": "modules",
+  "compatibility_date": "2025-01-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+
+  // D1 Database Binding
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "flytripvisa",
+      "database_id": "YOUR_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // R2 (Object Storage) Binding for Files
+  "r2_buckets": [
+    {
+      "binding": "BUCKET",
+      "bucket_name": "flytripvisa-files"
+    }
+  ],
+
+  // Workers AI Binding
+  "ai": {
+    "binding": "AI"
+  },
+
+  // Environment Variables
+  "env": {
+    "production": {
+      "env_path": ".env.production"
+    },
+    "development": {
+      "env_path": ".env.development"
+    }
+  },
+
+  // Triggers (Cron Jobs)
+  "triggers": {
+    "crons": [
+      "0 0 * * *" // Daily cleanup at midnight UTC
+    ]
+  },
+
+  // Build Configuration
+  "build": {
+    "command": "npm run build",
+    "cwd": "./",
+    "watch_paths": [
+      "src/**/*.js",
+      "frontend/src/**/*.tsx"
+    ]
+  },
+
+  // Observability
+  "observability": {
+    "enabled": true
+  },
+
+  // Limits
+  "limits": {
+    "cpu_milliseconds": 50000
+  }
+}
