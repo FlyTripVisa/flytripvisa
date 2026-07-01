@@ -1,5 +1,5 @@
 {
-  "name": "flytrip-visa-ai",
+  "name": "flytripvisa",
   "version": "1.0.0",
   "description": "Cloudflare Workers + D1 + React MPA for Visa Management with AI Chat",
   "type": "module",
@@ -33,6 +33,6 @@
     "react",
     "mpa"
   ],
-  "author": "FlyTripVisa Team",
+  "author": "flytripvisa Team",
   "license": "Apache-2.0"
 }
