@@ -1,4 +1,4 @@
-name = "flytrip-visa-ai"
+name = "flytripvisaai"
 main = "src/index.ts"
 compatibility_date = "2026-07-01"
 compatibility_flags = ["nodejs_compat"]
