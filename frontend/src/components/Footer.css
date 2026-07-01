@@ -1,0 +1,73 @@
+/**
+ * Footer Component Styles
+ */
+
+.fly-footer {
+  background: rgba(0, 0, 0, 0.8);
+  border-top: 1px solid var(--border-light);
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: auto;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-content p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 11px;
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+}
+
+.divider {
+  color: var(--text-muted);
+}
+
+.contact-info {
+  color: var(--text-primary);
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .fly-footer {
+    padding: 16px 12px;
+  }
+
+  .footer-content {
+    gap: 8px;
+  }
+
+  .footer-content p {
+    font-size: 11px;
+  }
+
+  .footer-links a {
+    font-size: 10px;
+  }
+}
