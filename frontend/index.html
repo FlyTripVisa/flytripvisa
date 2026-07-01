@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+<title> FLYTRIPVISA | 飞行旅行签证 Fast AI-Powered Online Visa Application Assistant</title>
+
+<meta name="description" content="flytripvisa.site - AI Support visa application online.">
+<link rel="canonical" href="https://flytripvisa.site/">
+
+<meta name="google-site-verification" content="Ifx8LAOJ8lqwnjqJwbiVC7-3uWSnBKUXBcCucSmF7V4">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+  /* Root Variables */
+  :root {
+    --primary: #818cf8;
+    --primary-dark: #312e81;
+    --primary-light: #c7d2fe;
+    --gold: #f5b042;
+    --gold-light: #ffeaa7;
+    --bg-dark: #000000;
+    --card-bg: #161616;
+    --border-light: rgba(255, 255, 255, 0.09);
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --green: #10b981;
+    --danger: #ef4444;
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #000000;
+    color: var(--text-primary);
+    min-height: 100vh;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 16px;
+  }
+
+  .header-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .logo span {
+    color: var(--primary);
+  }
+
+  .header-right {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+  }
+
+  .icon-btn:hover {
+    color: var(--primary);
+  }
+
+  .fly-ai-btn {
+    color: var(--primary);
+  }
+
+  /* Menu Dropdown */
+  .menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    margin-top: 8px;
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+  }
+
+  .menu-dropdown.active {
+    display: flex;
+  }
+
+  .menu-item {
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-primary);
+    transition: background-color 0.3s;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .menu-item:hover {
+    background-color: rgba(129, 140, 248, 0.1);
+    color: var(--primary);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  /* Sections */
+  .no-border-section {
+    padding: 24px 16px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .no-border-section:last-child {
+    border-bottom: none;
+  }
+
+  /* Footer */
+  .fly-footer {
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid var(--border-light);
+    padding: 24px 16px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* AI Chat Button (Floating) */
+  .ai-chat-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: var(--shadow-md);
+    z-index: 50;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .ai-chat-btn:hover {
+    transform: scale(1.1);
+    background-color: #6366f1;
+  }
+
+  .ai-chat-btn:active {
+    transform: scale(0.95);
+  }
+
+  /* Notice Bar */
+  .notice-bar {
+    background: rgba(129, 140, 248, 0.1);
+    border-bottom: 1px solid var(--primary);
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--primary);
+  }
+
+  /* React App Container */
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    body {
+      max-width: 100%;
+    }
+
+    .header {
+      padding: 10px 12px;
+    }
+
+    .logo {
+      font-size: 12px;
+    }
+
+    .hero h1 {
+      font-size: 24px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- React Root Mount Point -->
+<div id="root"></div>
+
+<!-- React Application Bootstrap -->
+<script type="module" src="/src/main.tsx"></script>
+
+</body>
+</html>
