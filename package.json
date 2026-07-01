@@ -1,0 +1,38 @@
+{
+  "name": "flytrip-visa-ai",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers + D1 + React MPA for Visa Management with AI Chat",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:prod": "wrangler deploy --env production",
+    "build": "tsc && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "wrangler dev --local",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.js",
+    "test": "jest",
+    "db:migrate": "wrangler d1 migrations apply flytripvisadb"
+  },
+  "dependencies": {
+    "wrangler": "^3.45.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250107.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "d1",
+    "visa",
+    "ai",
+    "react",
+    "mpa"
+  ],
+  "author": "FlyTripVisa Team",
+  "license": "Apache-2.0"
+}
