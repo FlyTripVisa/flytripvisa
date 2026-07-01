@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Build & Dist
+dist/
+build/
+.wrangler/
+*.tsbuildinfo
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temp Files
+tmp/
+temp/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Wrangler
+.wrangler/
+wrangler-install/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Migrations (local testing)
+# Keep remote backups, exclude local dev versions if needed
