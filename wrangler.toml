@@ -40,9 +40,9 @@ enabled = true
 
 # ============ Environment Variables ============
 [env.production]
-name = "flytrip-visa-ai-prod"
+name = "flytripvisa-prod"
 vars = { ENVIRONMENT = "production" }
 
 [env.development]
-name = "flytrip-visa-ai-dev"
+name = "flytripvisa-dev"
 vars = { ENVIRONMENT = "development" }
