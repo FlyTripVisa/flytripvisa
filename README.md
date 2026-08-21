@@ -44,16 +44,4 @@ flytripvisa-app/
 ​Constraint 1: Do not change binding names. They are mapped to Production Cloudflare IDs.
 ​Constraint 2: Maintain the index.js as an ES Module (export default { fetch: ... }).
 ​Constraint 3: When adding new features, use the D1 binding for state persistence and R2 for file handling.
-​Status: Production-Ready
-Last Config Update: 2026-08-21
-
-
----
-
-### এই ডকুমেন্টেশনের বিশেষত্ব:
-১. **সিস্টেম লজিক:** আপনি যখন অন্য কোনো এআইকে বা নতুন কোনো এআই মডেলকে দিয়ে কোড লেখাবেন, সে এই ডকুমেন্টেশন পড়লেই বুঝবে তাকে `env` অবজেক্ট কীভাবে ব্যবহার করতে হবে।
-২. **কনস্ট্রেইনস (Constraints):** আমি এখানে স্পষ্ট করে দিয়েছি যেন কেউ বাইন্ডিংয়ের নাম পরিবর্তন না করে, যা আপনার প্রজেক্টের জন্য অত্যন্ত গুরুত্বপূর্ণ।
-৩. **ডিপ্লয়মেন্ট ফ্লো:** ডাটাবেজ মাইগ্রেশন এবং ফাইল সার্ভিংয়ের আলাদা ইনস্ট্রাকশন দেওয়া আছে।
-
-এটি আপনার প্রজেক্টের জন্য একটি "মাস্টার ডকুমেন্ট" হিসেবে কাজ করবে।
-
+​
