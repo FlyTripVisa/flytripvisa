@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@flue/cli": "^2.0.3",
+    "@flue/runtime": "^2.0.3",
+    "agents": "^0.21.0",
+    "ai": "^7.0.73",
+    "hono": "^4.13.3",
+    "workers-ai-provider": "^4.0.0"
+  },
+  "name": "flytripvisa",
+  "version": "1.0.0",
+  "description": "**FlyTripVisa-App** is a serverless, high-concurrency travel and visa processing platform deployed on Cloudflare Workers. It integrates edge computing with D1 (SQL) for structured data, R2 (Object Storage) for assets, and KV (Key-Value) for ultra-fast cache.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyTripVisa/flytripvisa-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/FlyTripVisa/flytripvisa-app/issues"
+  },
+  "homepage": "https://github.com/FlyTripVisa/flytripvisa-app#readme"
+}
