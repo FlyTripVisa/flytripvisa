@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  local-llm:
+    build: .
+    container_name: flytripvisa-llm
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: always
+volumes:
+  ollama_data:
