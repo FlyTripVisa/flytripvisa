@@ -1,0 +1,45 @@
+name = "flytripvisa"
+main = "index.js"
+compatibility_date = "2026-08-30"
+compatibility_flags = [ "nodejs_compat" ]
+
+# Local execution settings
+[dev]
+port = 8080
+ip = "localhost"
+
+# Global Environment Variables
+[vars]
+ENVIRONMENT = "production"
+API_VERSION = "v1"
+
+# 1. KV Namespace Binding (For Ultra-Fast Cache)
+# Command to create: npx wrangler kv:namespace create "FLYTRIPVISA_CACHE"
+[[kv_namespaces]]
+binding = "FLYTRIPVISA_CACHE"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# 2. D1 Database Binding (For Structured Data / SQL)
+# Command to create: npx wrangler d1 create flytripvisa-db
+[[d1_databases]]
+binding = "DB"
+database_name = "flytripvisa-db"
+database_id = "YOUR_D1_DATABASE_ID"
+
+# 3. R2 Object Storage Bucket Binding (For Assets / Images / Documents)
+# Command to create: npx wrangler r2 bucket create flytripvisa-assets
+[[r2_buckets]]
+binding = "FLYTRIPVISA_BUCKETS"
+bucket_name = "flytripvisa-assets"
+
+# 4. Cloudflare Workers AI Binding (For AI Agents & Models)
+[ai]
+binding = "AI"
+
+# Optional: Smart Routing & Observability
+[observability]
+enabled = true
+
+# Cron Triggers (Keep-alive and maintenance jobs)
+[triggers]
+crons = [ "*/15 * * * *" ] # Triggers every 15 mins to keep workers and services active
