@@ -12,14 +12,47 @@
 
 ## 3. Directory Structure
 ```text
+
 flytripvisa-app/
-├── wrangler.toml           # Deployment & Binding Config
-├── index.js                # Core Worker Logic (Router & Middleware)
-├── schema.sql              # Database Schema (D1)
-├── public/                 # Static Assets (Frontend)
-│   ├── index.html          # User Chat UI
-│   └── dashboard.html      # Admin Panel
-└── README.md               # Technical Documentation
+├── .github/
+│   └── workflows/
+│       └── deploy.yml            # CI/CD pipeline for Cloudflare Workers deployment
+├── migrations/
+│   └── 0001_initial_schema.sql   # D1 database migration SQL files
+├── public/
+│   └── favicon.ico               # Static assets (if served via Worker)
+├── src/
+│   ├── ai/
+│   │   ├── agents/               # AI Agent definitions (Visa assistant, Flight search parser)
+│   │   └── index.js              # Cloudflare Workers AI integration wrapper
+│   ├── config/
+│   │   └── constants.js          # Global constants and HTTP status codes
+│   ├── controllers/
+│   │   ├── visaController.js     # Visa processing business logic
+│   │   ├── flightController.js   # Flight search & booking logic
+│   │   ├── storageController.js  # R2 asset upload/download handlers
+│   │   └── userController.js    # User authentication & profile management
+│   ├── db/
+│   │   ├── queries.js            # Prepared D1 SQL queries
+│   │   └── schema.js             # Table schema helper functions
+│   ├── middlewares/
+│   │   ├── auth.js               # JWT/Session authentication middleware
+│   │   ├── cache.js              # KV caching layer middleware
+│   │   └── errorHandler.js      # Global error handler
+│   ├── routes/
+│   │   ├── ai.routes.js          # AI Assistant endpoints
+│   │   ├── flight.routes.js      # Flight API routes
+│   │   ├── storage.routes.js     # R2 Document bucket routes
+│   │   └── visa.routes.js        # Visa application routes
+│   ├── utils/
+│   │   ├── kvHelper.js           # Cache read/write utilities
+│   │   ├── r2Helper.js           # R2 storage upload/delete utilities
+│   │   └── response.js           # Standardized JSON response wrapper
+│   └── index.js                  # Hono Main Entry Point
+├── .gitignore
+├── package.json
+├── README.md
+└── wrangler.toml                 # Cloudflare Workers Configuration
 
 4. System Architecture Logic
 ​The application follows a "Modular Edge-Request" model:
