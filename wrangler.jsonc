@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "flytripvisa",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "ENVIRONMENT": "production",
+    "API_VERSION": "v1"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "FLYTRIPVISA_CACHE",
+      "id": "YOUR_KV_NAMESPACE_ID"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "flytripvisa-db",
+      "database_id": "YOUR_D1_DATABASE_ID"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "FLYTRIPVISA_BUCKETS",
+      "bucket_name": "flytripvisa-assets"
+    }
