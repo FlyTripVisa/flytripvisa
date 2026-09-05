@@ -9,7 +9,7 @@
   },
   "name": "flytripvisa",
   "version": "1.0.0",
-  "description": "**FlyTripVisa-App** is a serverless, high-concurrency travel and visa processing platform deployed on Cloudflare Workers. It integrates edge computing with D1 (SQL) for structured data, R2 (Object Storage) for assets, and KV (Key-Value) for ultra-fast cache.",
+  "description": "**flytripvisa** is a serverless, high-concurrency travel and visa processing platform deployed on Cloudflare Workers. It integrates edge computing with D1 (SQL) for structured data, R2 (Object Storage) for assets, and KV (Key-Value) for ultra-fast cache.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
