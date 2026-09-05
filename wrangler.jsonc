@@ -26,5 +26,5 @@
   "r2_buckets": [
     {
       "binding": "FLYTRIPVISA_BUCKETS",
-      "bucket_name": "flytripvisa-assets"
+      "bucket_name": "flytripvisa-miniprogram"
     }
