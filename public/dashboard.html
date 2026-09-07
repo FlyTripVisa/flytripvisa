@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlyTripVisa | Admin Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+<header class="admin-header">
+  <div class="logo">Fly<span>Trip</span>Visa Admin</div>
+  <button class="logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+</header>
+
+<div class="stats">
+  <div class="stat"><h3 id="statTotal">0</h3><p>Total</p></div>
+  <div class="stat"><h3 id="statPending">0</h3><p>Pending</p></div>
+  <div class="stat"><h3 id="statApproved">0</h3><p>Approved</p></div>
+  <div class="stat"><h3 id="statRejected">0</h3><p>Rejected</p></div>
+</div>
+
+<div class="card">
+  <h3><i class="fas fa-list"></i> Visa Applications</h3>
+  <table class="table">
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Email</th><th>Destination</th><th>Status</th><th>Action</th></tr>
+    </thead>
+    <tbody id="appTable"></tbody>
+  </table>
+</div>
+
+<script src="assets/js/admin.js"></script>
+</body>
+</html>
