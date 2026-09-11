@@ -1,23 +1,29 @@
 name = "flytripvisa"
 main = "src/index.ts"
-compatibility_date = "2026-01-01"
+compatibility_date = "2026-09-11"
 
-# D1 Database binding
+D1 Database binding
+
 [[d1_databases]]
 binding = "DB"
 database_name = "flytripvisa_db"
 database_id = "YOUR_D1_DB_ID"
 
-# Environment variables (set via: wrangler secret put NAME)
-# JWT_SECRET
-# TG_BOT_TOKEN
-# TG_CHAT_ID
-# SMTP_TO = visa@flytripvisa.site
+Static files
 
 [assets]
 directory = "./public"
 binding = "ASSETS"
+not_found_handling = "none"
 
-# For Pages-style static hosting, use:
-# [site]
-# bucket = "./public"
+Environment variables
+
+Set secrets with:
+
+wrangler secret put JWT_SECRET
+
+wrangler secret put TG_BOT_TOKEN
+
+wrangler secret put TG_CHAT_ID
+
+wrangler secret put SMTP_TO
