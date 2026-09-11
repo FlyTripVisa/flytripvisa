@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="https://flytripvisa.site/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <title>Fly AI |Fly AI Powerd By FlyTripVisa.site</title>
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Fly Trip Visa | 飞行旅行签证 - Expert Business Setup & Visa Consultancy">
+  <meta name="description" content="Fly Trip Visa | 飞行旅行签证 - offers expert consulting for business setup, freelance visas, and residency ID processing in Dubai, China, Malaysia, and Vietnam. Get professional support today.">
+  <meta name="keywords" content="Business Setup, Freelance Visa, Residency ID, Dubai Visa, China Business, Malaysia Residency, Visa Consultancy, Fly Trip Visa">
+  <meta name="author" content="Fly Trip Visa | 飞行旅行签证">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flytripvisa.site/business-setup">
+  <meta property="og:title" content="Fly Trip Visa | 飞行旅行签证 - Expert Business Setup & Visa Consultancy">
+  <meta property="og:description" content="Seamless residency and business setup solutions for Dubai, China, Malaysia, and Vietnam.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/FlyTripVisa/miniprogram/refs/heads/main/Img/Black%20Dragon%20Flat%20Illustrative%20E-Sports%20Gaming%20Logo.png">
+
+  <!-- Twitter / X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://flytripvisa.site/">
+  <meta property="twitter:title" content="Fly Trip Visa | 飞行旅行签证 - Expert Business Setup & Visa Consultancy">
+  <meta property="twitter:description" content="Expert business setup and visa consulting services for Dubai, China, Malaysia, and Vietnam.">
+  <meta property="twitter:image" content="https://raw.githubusercontent.com/FlyTripVisa/miniprogram/refs/heads/main/Img/Black%20Dragon%20Flat%20Illustrative%20E-Sports%20Gaming%20Logo.png">
+
+  <style>
+    /* Disable default blue tap highlight and focus flash globally */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      outline: none !important;
+    }
+    body {
+      background: #f7f7f7;
+      color: #000000e6;
+      font-size: 16px;
+      height: 100%;
+      margin: 0;
+      width: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    a, button {
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    ul {
+      list-style: none;
+    }
+
+    @keyframes show {
+      0% { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .wrap {
+      min-height: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content {
+      flex: 1 0 auto;
+    }
+
+    /* banner & header navbar */
+    .banner {
+      position: relative;
+      color: #ffffffe6;
+      padding: 90px 0 80px;
+      text-align: center;
+    }
+    .banner__inner {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150%;
+      min-width: 1440px;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      border-radius: 0 0 50% 50%;
+
+      /* ---------- HERO BACKGROUND: Your custom PNG image ---------- */
+      background: url('https://pub-22f296e1cd4242c5bbb84873fce6317f.r2.dev/Hero-BG_20260905_231726_0000.png') no-repeat center / cover;
+      background-color: #0a0a1a; /* fallback dark color */
+    }
+    /* Dark overlay for text readability */
+    .banner__inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.50);
+      border-radius: inherit;
+    }
+    
+    .header-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      z-index: 50;
+    }
+    .header-left-logo {
+      display: flex;
+      align-items: center;
+    }
+    .header-left-logo img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .banner__bd {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: show 1s both;
+      padding: 0 20px;
+    }
+    .banner__desc_wrap {
+      margin: 0 0 24px;
+    }
+    .banner__desc {
+      color: #ffffffe6;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin: 0;
+      padding: 4px 0;
+    }
+    .banner__subdesc {
+      color: #ffffffe6;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      margin-top: 6px;
+    }
+    
+    .badge-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background-color: #007bff;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 50%;
+      margin-left: 6px;
+      vertical-align: middle;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    /* Quick Button Menu (Hero section quick action buttons: 5 items) */
+    .banner__download {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 12px;
+      max-width: 100%;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner__download-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff12;
+      border-radius: 50%;
+      width: 58px;
+      height: 58px;
+      cursor: pointer;
+      color: #ffffffe6;
+      font-size: 9px;
+      transition: background 0.2s, transform 0.1s;
+      text-align: center;
+      padding: 4px;
+      border: none;
+    }
+    .banner__download-item:active {
+      transform: scale(0.95);
+    }
+    .banner__download-item i {
+      margin-bottom: 2px;
+      display: block;
+      width: 20px !important;
+      height: 20px !important;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .banner__download-item span {
+      line-height: 1.1;
+      font-size: 8.5px;
+    }
+    .banner__download-item:hover {
+      background-color: #ffffff26;
+    }
+
+    /* Footer download icon items - SMALLER SIZE */
+    .footer-download {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 12px;
+      max-width: 100%;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer-download-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff1a;
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      border: none;
+    }
+    .footer-download-item:active {
+      transform: scale(0.95);
+    }
+    .footer-download-item i {
+      display: block;
+      width: 20px !important;
+      height: 20px !important;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .footer-download-item:hover {
+      background-color: #ffffff33;
+    }
+
+    /* Header Dropdown Menu Styles */
+    .lang_change {
+      position: relative;
+    }
+    .lang-switcher__trigger {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      padding: 6px 8px;
+      border-radius: 18px;
+      transition: background 0.2s;
+    }
+    .lang-switcher__trigger:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .dropdown-menu {
+      position: absolute;
+      right: 0;
+      top: 42px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      width: 180px;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 100;
+      animation: show 0.2s ease;
+    }
+    .dropdown-menu.show {
+      display: flex;
+    }
+    .dropdown-menu a {
+      padding: 10px 14px;
+      color: #333333;
+      font-size: 14px;
+      text-align: left;
+      border-bottom: 1px solid #f1f1f1;
+      transition: background 0.2s, color 0.2s;
+    }
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+    .dropdown-menu a:hover {
+      background: #f8f9fa;
+      color: #07c160;
+    }
+
+    /* Card Style Layout */
+    .content-container {
+      max-width: 680px;
+      margin: 35px auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .card__banner-wrap {
+      width: 100%;
+      height: 230px;
+      background-color: black;
+      background-image: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.15) 0%, transparent 70%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card__banner-img {
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      display: block;
+      padding: 15px;
+    }
+
+    .card__body {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .card__meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card__date {
+      color: #7b7b7b;
+      font-size: 14px;
+    }
+
+    .card__actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .card__icon-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #e0e0e0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #333;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    .card__icon-btn:hover {
+      background: #f5f5f5;
+    }
+
+    .card__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #111111;
+      line-height: 1.35;
+      text-decoration: none;
+      display: block;
+    }
+    .card__title:hover {
+      color: #07c160;
+    }
+
+    .card__tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: #f1f3f5;
+      color: #495057;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    /* Quick Button Icons */
+    .icon-visa { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2Z'/%3E%3C/svg%3E"); }
+    .icon-flight { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 12l20-8-8 20-4-8-8-4Z'/%3E%3C/svg%3E"); }
+    .icon-pay { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 4H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM1 10h22'/%3E%3C/svg%3E"); }
+    .icon-esim-btn { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm4 5h6m-6 4h6'/%3E%3C/svg%3E"); }
+    .icon-ai-bot { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 2a2 2 0 0 1 2 2v2h-4V4a2 2 0 0 1 2-2ZM4 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8Zm3 3h2v2H7v-2Zm8 0h2v2h-2v-2Z'/%3E%3C/svg%3E"); }
+
+    /* OS Download Icons - smaller */
+    .icon-ios { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 19c-2.3 0-4-1.2-4-3s1.7-3 4-3 4 1.2 4 3-1.7 3-4 3Zm0-14c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Zm5.2 3.8A7 7 0 0 0 12 5a7 7 0 0 0-5.2 2.8C5.2 9.2 4 11.5 4 14c0 3.3 2.7 6 6 6h4c3.3 0 6-2.7 6-6 0-2.5-1.2-4.8-2.8-6.2Z'/%3E%3C/svg%3E"); }
+    .icon-android { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 11v6m14-6v6M7 7l2 2m8-2-2 2M7 17h10a2 2 0 0 0 2-2v-4H5v4a2 2 0 0 0 2 2ZM9 5h6m-7-2h8'/%3E%3C/svg%3E"); }
+    .icon-windows { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5h8v8H3V5Zm10 0h8v8h-8V5ZM3 13h8v8H3v-8Zm10 0h8v8h-8v-8Z'/%3E%3C/svg%3E"); }
+    .icon-mac { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 3c-1.5 0-3 1.5-3 3 0 .5.2 1 .5 1.5C10 8 11 8.5 12 8.5s2-.5 1.5-1c.3-.5.5-1 .5-1.5 0-1.5-1.5-3-3-3Zm-4 7c-2 0-4 2-4 5 0 2.5 1.5 5.5 3.5 7 .8.6 1.8.8 2.5.8s1.7-.2 2.5-.8c2-1.5 3.5-4.5 3.5-7 0-3-2-5-4-5-1.2 0-2.3.8-3 1.5-.7-.7-1.8-1.5-3-1.5Z'/%3E%3C/svg%3E"); }
+
+    /* Footer Social Icons - smaller */
+    .icon-fb { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z'/%3E%3C/svg%3E"); }
+    .icon-wecom { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4-4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'/%3E%3C/svg%3E"); }
+    .icon-insta { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Crect width='20' height='20' x='2' y='2' stroke='%23fff' stroke-width='2' rx='5' ry='5'/><path stroke='%23fff' stroke-width='2' d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01'/%3E%3C/svg%3E"); }
+    .icon-tg { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m22 2-7 20-4-9-9-4 20-7zM22 2 11 13'/%3E%3C/svg%3E"); }
+
+    /* download dialog */
+    .download__dialog-wrp {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .download__dialog-wrp_show {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .download__dialog-mask {
+      background-color: #00000080;
+      position: absolute;
+      inset: 0;
+    }
+    .download__dialog {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 28px 32px;
+      max-width: 480px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .download__dialog-close {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      background-color: #555;
+      mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E  %3Cpath fill-opacity='.9' fill-rule='evenodd' d='M12.25 10.693L6.057 4.5 5 5.557l6.193 6.193L5 17.943 6.057 19l6.193-6.193L18.443 19l1.057-1.057-6.193-6.193L19.5 5.557 18.443 4.5z'/%3E%3C/svg%3E") no-repeat center / contain;
+      -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E  %3Cpath fill-opacity='.9' fill-rule='evenodd' d='M12.25 10.693L6.057 4.5 5 5.557l6.193 6.193L5 17.943 6.057 19l6.193-6.193L18.443 19l1.057-1.057-6.193-6.193L19.5 5.557 18.443 4.5z'/%3E%3C/svg%3E") no-repeat center / contain;
+      background-size: cover;
+    }
+    .download__dialog-hd {
+      font-size: 22px;
+      font-weight: 500;
+      margin: 12px 0 28px;
+      text-align: center;
+    }
+    .download__btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 12px 20px;
+      width: 100%;
+      max-width: 280px;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+      font-size: 15px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+    .download__btn_primary {
+      background-color: #07c160;
+      color: #fff;
+    }
+    .download__btn_primary:hover {
+      background-color: #06ad56;
+    }
+    .download__btn-title {
+      font-weight: 500;
+    }
+    .icon-google-play {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' fill='none' viewBox='0 0 36 36'%3E%3Cpath fill='%23343434' d='M5.859 5.842a1.87 1.87 0 0 0-.263.965v22.39c0 .36.097.687.263.966l12.997-12.16zM19.64 17.266l4.174-3.907L8.366 5.14a1.87 1.87 0 0 0-1.715-.026zM29.404 16.337l-4.59-2.444L20.424 18l4.39 4.107 4.59-2.444c1.334-.71 1.334-2.62 0-3.328zM19.64 18.733 6.65 30.886a1.86 1.86 0 0 0 1.716-.027l15.448-8.22z'/%3E%3C/svg%3E");
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+    }
+    .icon-download-circle {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='m21.284 17.391-4.324 4.324V8.63h-1.92v13.086l-4.324-4.325-1.358 1.357 4.831 4.83a2.54 2.54 0 0 0 1.81.75 2.54 2.54 0 0 0 1.812-.75l4.83-4.83z' clip-rule='evenodd'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0m0 1.92c7.763 0 14.08 6.317 14.08 14.08S23.763 30.08 16 30.08 1.92 23.763 1.92 16 8.237 1.92 16 1.92' clip-rule='evenodd'/%3E%3C/svg%3E");
+      width: 32px;
+      height: 32px;
+      background-size: cover;
+    }
+
+    /* footer */
+    .footer-wrp {
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .footer {
+      background-color: black;
+      padding: 32px 20px 28px;
+      text-align: center;
+      width: 100%;
+    }
+    .footer__bd {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1.8;
+      gap: 4px 6px;
+      margin-bottom: 12px;
+    }
+    .footer__links a {
+      color: red;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .footer__links a:hover {
+      text-decoration: underline;
+    }
+    .footer__divider {
+      color: #bbb;
+      display: inline-block;
+      padding: 0 2px;
+    }
+    .footer__copyright {
+      color: #8b8b8b;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+    .footer__social {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer__social-link {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      transition: opacity 0.2s;
+    }
+    .footer__social-link:hover {
+      opacity: 0.7;
+    }
+    .footer__social-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 760px) {
+      .header-top {
+        padding: 12px 15px;
+      }
+      .header-left-logo img {
+        height: 28px;
+      }
+      .banner {
+        padding: 75px 0 60px;
+      }
+      .banner__desc {
+        font-size: 16px;
+      }
+      .banner__subdesc {
+        font-size: 13px;
+      }
+      .banner__download-item {
+        width: 48px;
+        height: 48px;
+        font-size: 8px;
+      }
+      .banner__download-item i {
+        width: 15px !important;
+        height: 15px !important;
+      }
+      .footer-download-item {
+        width: 40px;
+        height: 40px;
+      }
+      .footer-download-item i {
+        width: 18px !important;
+        height: 18px !important;
+      }
+      .card__banner-wrap {
+        height: 190px;
+      }
+      .card__banner-img {
+        height: 190px;
+      }
+      .card__body {
+        padding: 16px;
+      }
+    }
+
+    /* ---------- NEW VISA GRID STYLES (provided) ---------- */
+    .section-wrap {
+      max-width: 1200px;
+      margin: 18px auto;
+      padding: 0 14px;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .section-head h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111;
+    }
+    .section-head span {
+      font-size: 11px;
+      color: #555;
+      background: #fff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-weight: 600;
+    }
+
+    .visa-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    @media (min-width: 640px) {
+      .visa-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .visa-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .visa-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #eef2f0;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+      transition: .25s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .visa-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgba(7,193,96,0.18);
+      border-color: #07c160;
+    }
+    .visa-card-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      background: #f2f2f2;
+    }
+    .visa-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .visa-card:hover .visa-card-img-wrap img {
+      transform: scale(1.05);
+    }
+    .visa-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .visa-card-body {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .visa-country {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a1a;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .visa-type {
+      font-size: 11px;
+      color: #666666;
+    }
+    .visa-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed #eee;
+      padding-top: 8px;
+      margin-top: 4px;
+    }
+    .visa-time {
+      font-size: 10px;
+      color: #888;
+      font-weight: 600;
+    }
+    .visa-apply {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      background: #07c160;
+      padding: 4px 12px;
+      border-radius: 12px;
+    }
+
+    /* ===== CHAT UI (original structure preserved, only behavior added) ===== */
+    .chat-area { 
+      flex: 1; 
+      display: flex; 
+      flex-direction: column; 
+      overflow-y: auto;
+      padding: 80px 20px 40px; 
+      margin-top: 60px; 
+      gap: 12px;
+      user-select: text;
+    }
+    
+    .input-container { 
+      padding: 10px 16px 20px; 
+      background: rgba(10,10,10,0.95); 
+      backdrop-filter: blur(10px);
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    }
+    
+    .input-wrapper { 
+      position: relative; 
+      margin-bottom: 12px; 
+    }
+
+    .input-box { 
+      background-color: #1f2937; 
+      border-radius: 9999px; 
+      padding: 14px 20px; 
+      width: 100%; 
+      border: 1px solid transparent; 
+      color: white; 
+      outline: none; 
+      padding-right: 50px; 
+      font-size: 16px; 
+      user-select: text;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .send-btn { 
+      position: absolute; right: 8px; top: 50%; transform: translateY(-50%); 
+      background: #3b82f6; border: none; color: white; width: 35px; height: 35px; 
+      border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.15s ease;
+    }
+    .send-btn:active {
+      opacity: 0.8;
+    }
+    .send-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    
+    .action-container { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .action-btn { 
+      background: #1f2937; color: #9ca3af; border: none; padding: 7px 13px; 
+      border-radius: 20px; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 5px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .action-btn.active { background: #3b82f6; color: white; }
+    .action-btn:active { opacity: 0.85; }
+    
+    .icon-btn { 
+      background: #1f2937; color: #fff; border: none; width: 35px; height: 35px; 
+      border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.15s ease;
+    }
+    .icon-btn:active { opacity: 0.8; }
+
+    .search-mode .input-box { 
+      background-color: #1e3a8a; 
+      border: 2px solid #60a5fa; 
+    }
+
+    .message {
+      padding: 12px 18px;
+      border-radius: 18px;
+      max-width: 80%;
+      margin: 6px 0;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .user-message {
+      background: #3b82f6;
+      color: white;
+      margin-left: auto;
+      border-bottom-right-radius: 4px;
+    }
+    .ai-message {
+      background: #1f2937;
+      color: #f3f4f6;
+      margin-right: auto;
+      border-bottom-left-radius: 4px;
+    }
+    .result {
+      background: #1f2937; 
+      padding: 14px 18px; 
+      border-radius: 12px; 
+      margin: 8px 0; 
+      max-width: 85%;
+    }
+    .typing-indicator {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+    .typing-indicator span {
+      width: 7px; height: 7px;
+      background: #9ca3af;
+      border-radius: 50%;
+      animation: typing 1.2s infinite;
+    }
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing {
+      0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+      30% { opacity: 1; transform: translateY(-4px); }
+    }
+    .error-message {
+      background: #3b0d0d;
+      color: #fca5a5;
+      border: 1px solid #7f1d1d;
+    }
+
+    /* Extra bottom padding so last message is never hidden behind fixed input */
+    .chat-bottom-spacer {
+      height: 20px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="__nuxt">
+    <div class="wrap">
+      <div class="main-content">
+        <!-- banner -->
+        <div class="banner">
+          <div class="banner__inner"></div>
+
+          <!-- Top Navigation Header -->
+          <div class="header-top">
+            <div class="header-left-logo">
+              <img src="https://raw.githubusercontent.com/FlyTripVisa/miniprogram/refs/heads/main/Img/Black%20Dragon%20Flat%20Illustrative%20E-Sports%20Gaming%20Logo.png" alt="Fly Trip Visa Logo">
+            </div>
+
+            <!-- Header Links with Dropdown Menu -->
+            <div class="lang_change">
+              <div class="lang-switcher">
+                <button class="lang-switcher__trigger" id="dropdown_btn" aria-label="Links Menu">
+                  <span>🌐 ▾</span>
+                </button>
+                <div class="dropdown-menu" id="dropdown_menu">
+                   <a href="https://newsroom.wechat.com/" target="_blank">👽 Fly-AI Alion</a>
+                   <a href="https://newsroom.wechat.com/" target="_blank">• eVisa</a>
+                   <a href="https://newsroom.wechat.com/" target="_blank">• Visa</a>
+                  <a href="https://newsroom.wechat.com/" target="_blank">• Flight</a>
+                  <a href="https://safety.wechat.com/en_US" target="_blank">• Hotels</a>
+                  <a href="https://safety.wechat.com/en_US" target="_blank">• Jingpay Virtual Card</a>
+                  <a href="https://safety.wechat.com/en_US" target="_blank">• Fly-eSim Deals</a>
+                  <a href="https://safety.wechat.com/en_US" target="_blank">• China Business & Residency</a>
+                  <a href="https://safety.wechat.com/en_US" target="_blank">• Signup & Login </a>
+                  <a href="https://cs.help.wechat.com/hc/en-us" target="_blank">• Contact us </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner__bd">
+            <div class="banner__desc_wrap">
+              <h1 class="banner__desc">Fly Trip Visa | 飞行旅行签证 <span class="badge-gold">✓</span></h1>
+              <p class="banner__subdesc">Expert consulting for business setup, freelance visas, and residency ID processing in Dubai, China, Malaysia, and Vietnam.</p>
+            </div>
+            <!-- Quick Button Menu (Hero section quick action buttons: 5 items) -->
+            <div class="banner__download">
+              <a class="banner__download-item">
+                <i class="icon-visa"></i>
+                <span>Visa</span>
+              </a>
+              <a class="banner__download-item" id="android_download">
+                <i class="icon-flight"></i>
+                <span>Flights</span>
+              </a>
+              <a class="banner__download-item" href="https://mac.weixin.qq.com/en" target="_blank">
+                <i class="icon-pay"></i>
+                <span>Pay</span>
+              </a>
+              <a class="banner__download-item" href="https://apps.microsoft.com/detail/xpfckbrnfzq62g" target="_blank">
+                <i class="icon-esim-btn"></i>
+                <span>eSim</span>
+              </a>
+              <a class="banner__download-item" href="https://safety.wechat.com/en_US" target="_blank">
+                <i class="icon-ai-bot"></i>
+                <span>AI-Robot</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visa Grid Section -->
+        <div class="section-wrap">
+          <div class="section-head">
+            <h2>Popular Visa Destinations</h2>
+            <span>🌍 12 Countries</span>
+          </div>
+          <div class="visa-grid" id="visaGrid"></div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area" id="chatArea">
+          <div id="welcomeMessage" style="text-align: center; color: #9ca3af; width: 100%; margin-top: 50px;">
+              <h2>👋 Welcome to FlyTripVisa AI!</h2>
+              <p style="margin-top: 8px;">কীভাবে সাহায্য করতে পারি?</p>
+          </div>
+          <div class="chat-bottom-spacer"></div>
+        </div>
+
+        <!-- Fixed Input Bar -->
+        <div class="input-container" id="inputContainer">
+          <div class="input-wrapper" id="inputWrapper">
+              <input type="text" class="input-box" placeholder="Message or hold to speak" id="messageInput" autocomplete="off">
+              <button class="send-btn" id="sendBtn" aria-label="Send message">➤</button>
+          </div>
+          
+          <div class="action-container">
+              <button class="action-btn" id="thinkBtn">⚛️ Think</button>
+              <button class="action-btn active" id="searchBtn">🌐 Search</button>
+              <div style="flex-grow: 1;"></div>
+              <button class="icon-btn" id="attachBtn">📎</button>
+              <button class="icon-btn" id="micBtn">🎙️</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer (kept exactly as original) -->
+      <div class="footer-wrp">
+        <div class="footer">
+          <div class="footer__bd">
+            <div class="footer__links">
+              <a href="#">About Us</a>
+              <span class="footer__divider">|</span>
+              <a href="#">Privacy Policy</a>
+              <span class="footer__divider">|</span>
+              <a href="#">Terms of Service</a>
+              <span class="footer__divider">|</span>
+              <a href="#">Contact</a>
+            </div>
+            <div class="footer__copyright">Fly AI Chat. All Rights Reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Dialog (original markup preserved) -->
+  <div class="download__dialog-wrp" id="download_dialog">
+    <div class="download__dialog-mask"></div>
+    <div class="download__dialog">
+      <div class="download__dialog-close" id="download_dialog_close"></div>
+      <div class="download__dialog-hd">Download App</div>
+      <button class="download__btn download__btn_primary">
+        <i class="icon-google-play"></i>
+        <span class="download__btn-title">Google Play</span>
+      </button>
+      <button class="download__btn">
+        <i class="icon-download-circle"></i>
+        <span class="download__btn-title">Direct APK</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- EXISTING ORIGINAL SCRIPT (dropdown, dialog, visa grid)        -->
+  <!-- Kept exactly as provided — untouched.                         -->
+  <!-- ============================================================ -->
+  <script>
+    (function() {
+      const androidBtns = document.querySelectorAll('#android_download, #android_download_footer');
+      const dialog = document.getElementById('download_dialog');
+      const closeBtn = document.getElementById('download_dialog_close');
+      const mask = dialog?.querySelector('.download__dialog-mask');
+
+      function showDialog() {
+        if (dialog) dialog.classList.add('download__dialog-wrp_show');
+      }
+      function hideDialog() {
+        if (dialog) dialog.classList.remove('download__dialog-wrp_show');
+      }
+
+      androidBtns.forEach(btn => {
+        if (btn) btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          showDialog();
+        });
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', hideDialog);
+      if (mask) mask.addEventListener('click', hideDialog);
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') hideDialog();
+      });
+
+      // Dropdown menu toggle for Header Links button
+      const dropdownBtn = document.getElementById('dropdown_btn');
+      const dropdownMenu = document.getElementById('dropdown_menu');
+
+      if (dropdownBtn && dropdownMenu) {
+        dropdownBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function() {
+          dropdownMenu.classList.remove('show');
+        });
+      }
+
+      // ---------- VISA GRID DATA & RENDER ----------
+      const visas = [
+        { country: "UAE / Dubai", type: "Tourist • 30/60 Days", time: "⏱ 24-48h", badge: "E-Visa", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&auto=format&fit=crop&q=80" },
+        { country: "Turkey", type: "Tourist • 30 Days", time: "⏱ 24h", badge: "E-Visa", img: "https://images.unsplash.com/photo-1541432901042-2d8bd64b3a9b?w=600&auto=format&fit=crop&q=80" },
+        { country: "Malaysia", type: "eVISA • 30 Days", time: "⏱ 48h", badge: "E-Visa", img: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&auto=format&fit=crop&q=80" },
+        { country: "Maldives", type: "Free Visa • 30 Days", time: "⏱ On Arrival", badge: "E-Visa", img: "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&auto=format&fit=crop&q=80" },
+        { country: "Singapore", type: "Tourist • 30 Days", time: "⏱ 24h", badge: "E-Visa", img: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&auto=format&fit=crop&q=80" },
+        { country: "Thailand", type: "Tourist • 60 Days", time: "⏱ 24-48h", badge: "E-Visa", img: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&auto=format&fit=crop&q=80" },
+        { country: "Vietnam", type: "eVISA • 30 Days", time: "⏱ 3-5 Days", badge: "E-Visa", img: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&auto=format&fit=crop&q=80" },
+        { country: "Japan", type: "Tourist • 90 Days", time: "⏱ 5-7 Days", badge: "E-Visa", img: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&auto=format&fit=crop&q=80" },
+        { country: "South Korea", type: "Tourist • 30 Days", time: "⏱ 3-5 Days", badge: "E-Visa", img: "https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=600&auto=format&fit=crop&q=80" },
+        { country: "Australia", type: "Tourist • 1 Year", time: "⏱ 7-10 Days", badge: "E-Visa", img: "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&auto=format&fit=crop&q=80" },
+        { country: "New Zealand", type: "Tourist • 90 Days", time: "⏱ 5-7 Days", badge: "E-Visa", img: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=600&auto=format&fit=crop&q=80" },
+        { country: "USA", type: "ESTA • 90 Days", time: "⏱ 72h", badge: "ESTA", img: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=600&auto=format&fit=crop&q=80" }
+      ];
+
+      const grid = document.getElementById('visaGrid');
+      if (grid) {
+        grid.innerHTML = visas.map(v => `
+          <div class="visa-card">
+            <div class="visa-card-img-wrap">
+              <img src="${v.img}" loading="lazy" alt="${v.country}">
+              <span class="visa-badge">${v.badge}</span>
+            </div>
+            <div class="visa-card-body">
+              <div>
+                <div class="visa-country">${v.country}</div>
+                <div class="visa-type">${v.type}</div>
+              </div>
+              <div class="visa-meta">
+                <span class="visa-time">${v.time}</span>
+                <span class="visa-apply">Apply</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    })();
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- CHAT FUNCTIONALITY (added)                                   -->
+  <!-- UI/CSS/HTML above is untouched. Only behavior below.         -->
+  <!-- ============================================================ -->
+  <script>
+    (function () {
+      'use strict';
+
+      // ---- Element references ----
+      const chatArea       = document.getElementById('chatArea');
+      const messageInput   = document.getElementById('messageInput');
+      const sendBtn        = document.getElementById('sendBtn');
+      const welcomeMsg     = document.getElementById('welcomeMessage');
+
+      // ---- State ----
+      let isRequestInFlight = false;   // prevents duplicate / concurrent requests
+
+      // ---- Helpers ----
+
+      /** Remove welcome banner on first user interaction */
+      function dismissWelcome() {
+        if (welcomeMsg && welcomeMsg.parentNode) {
+          welcomeMsg.remove();
+        }
+      }
+
+      /** Scroll chat so the latest message is visible (above the fixed input) */
+      function scrollToBottom() {
+        if (!chatArea) return;
+        // requestAnimationFrame ensures layout has settled after DOM insert
+        requestAnimationFrame(() => {
+          chatArea.scrollTop = chatArea.scrollHeight;
+        });
+      }
+
+      /** Build a chat bubble element */
+      function createBubble(text, className) {
+        const div = document.createElement('div');
+        div.className = 'message ' + className;
+        div.textContent = text;
+        return div;
+      }
+
+      /** Show a typing indicator (three animated dots) */
+      function showTypingIndicator() {
+        const wrap = document.createElement('div');
+        wrap.className = 'message ai-message';
+        wrap.id = 'typingIndicator';
+        wrap.innerHTML = '<span class="typing-indicator"><span></span><span></span><span></span></span>';
+        chatArea.insertBefore(wrap, chatArea.querySelector('.chat-bottom-spacer'));
+        scrollToBottom();
+        return wrap;
+      }
+
+      function hideTypingIndicator() {
+        const el = document.getElementById('typingIndicator');
+        if (el && el.parentNode) el.remove();
+      }
+
+      /** Append a final AI message bubble (used for both streaming & full-text paths) */
+      function appendAIMessage(initialText) {
+        const bubble = createBubble(initialText || '', 'ai-message');
+        chatArea.insertBefore(bubble, chatArea.querySelector('.chat-bottom-spacer'));
+        return bubble;
+      }
+
+      /** Append a user message bubble */
+      function appendUserMessage(text) {
+        const bubble = createBubble(text, 'user-message');
+        chatArea.insertBefore(bubble, chatArea.querySelector('.chat-bottom-spacer'));
+        scrollToBottom();
+      }
+
+      /** Show an error bubble safely */
+      function showError(message) {
+        const bubble = createBubble('⚠️ ' + message, 'ai-message error-message');
+        chatArea.insertBefore(bubble, chatArea.querySelector('.chat-bottom-spacer'));
+        scrollToBottom();
+      }
+
+      /** Toggle send button disabled state to prevent double-send */
+      function setSendingState(sending) {
+        isRequestInFlight = sending;
+        if (sendBtn) sendBtn.disabled = sending;
+      }
+
+      // ---- Send handler ----
+
+      function sendMessage() {
+        const text = messageInput ? messageInput.value.trim() : '';
+        if (!text) return;
+        if (isRequestInFlight) return; // prevent duplicate requests
+
+        dismissWelcome();
+        appendUserMessage(text);
+        if (messageInput) messageInput.value = '';
+
+        runAIRequest(text);
+      }
+
+      // ---- Central AI request orchestrator ----
+      //
+      // This function is the SINGLE entry point for getting an AI response.
+      // It:
+      //   - shows a typing indicator
+      //   - calls the configured AI provider (see "AI Integration" section below)
+      //   - renders the result (supports both normal & streaming responses)
+      //   - handles errors safely
+      //   - manages UI locking so requests can't be duplicated
+      //
+      async function runAIRequest(userText) {
+        setSendingState(true);
+        const indicator = showTypingIndicator();
+
+        try {
+          // askAI() returns either:
+          //   - a string (normal/full response), or
+          //   - an async iterable / ReadableStream of text chunks (streaming)
+          const response = await askAI(userText);
+
+          if (isStreamingResponse(response)) {
+            // ---- Streaming path: append chunks live ----
+            const bubble = appendAIMessage('');
+            hideTypingIndicator();
+            for await (const chunk of toAsyncIterable(response)) {
+              bubble.textContent += chunk;
+              scrollToBottom();
+            }
+            if (!bubble.textContent.trim()) {
+              bubble.textContent = '_(empty response)_';
+            }
+          } else {
+            // ---- Normal path: full text at once ----
+            hideTypingIndicator();
+            const bubble = appendAIMessage(String(response || ''));
+            if (!bubble.textContent.trim()) {
+              bubble.textContent = '_(empty response)_';
+            }
+          }
+        } catch (err) {
+          hideTypingIndicator();
+          console.error('[FlyAI] Request failed:', err);
+          showError(
+            (err && err.message)
+              ? err.message
+              : 'Something went wrong. Please try again.'
+          );
+        } finally {
+          setSendingState(false);
+          if (messageInput) messageInput.focus();
+        }
+      }
+
+      // ---- Stream detection helpers ----
+
+      function isStreamingResponse(resp) {
+        if (!resp) return false;
+        // Browser ReadableStream
+        if (typeof ReadableStream !== 'undefined' && resp instanceof ReadableStream) return true;
+        // Async iterable (has Symbol.asyncIterator or known generator)
+        if (typeof resp[Symbol.asyncIterator] === 'function') return true;
+        return false;
+      }
+
+      /** Normalize various stream types into an async iterable of text chunks */
+      async function* toAsyncIterable(resp) {
+        if (typeof resp[Symbol.asyncIterator] === 'function') {
+          yield* resp;
+          return;
+        }
+        if (typeof resp.getReader === 'function') {
+          const reader = resp.getReader();
+          while (true) {
+            const { value, done } = await reader.read();
+            if (done) break;
+            yield typeof value === 'string' ? value : new TextDecoder().decode(value);
+          }
+        }
+      }
+
+      // ---- Event wiring ----
+
+      if (sendBtn) {
+        sendBtn.addEventListener('click', sendMessage);
+      }
+
+      if (messageInput) {
+        // Enter to send (single Enter; Shift+Enter could be added for newline)
+        messageInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) {
+            e.preventDefault();
+            sendMessage();
+          }
+        });
+      }
+
+      // Keep latest message visible when on-screen keyboard / viewport resizes (mobile)
+      if (window.visualViewport && chatArea) {
+        window.visualViewport.addEventListener('resize', scrollToBottom);
+        window.visualViewport.addEventListener('scroll', scrollToBottom);
+      }
+      window.addEventListener('resize', scrollToBottom);
+
+      // Initial scroll position
+      scrollToBottom();
+    })();
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- AI INTEGRATION (modular — swap providers here, nowhere else)  -->
+  <!-- ============================================================ -->
+  <script>
+    /**
+     * =================================================================
+     *  Fly AI — Central AI Integration
+     *  -----------------------------------------------------------------
+     *  askAI(prompt) is the ONE function the chat UI calls.
+     *
+     *  Return value contract:
+     *    • string              → normal (full) response
+     *    • AsyncIterable<string> / ReadableStream
+     *                         → streamed response (chunks appended live)
+     *
+     *  To switch backends, edit ONLY the body of askAI() below.
+     *  Supported out of the box:
+     *    1) Local Ollama   (default, see OLLAMA_* config)
+     *    2) OpenAI-compatible API
+     *    3) Generic REST endpoint
+     *    4) Built-in demo fallback (works offline, no server needed)
+     *
+     *  Everything else in the chat (UI, scrolling, errors, dedup) stays
+     *  untouched when you change provider.
+     * =================================================================
+     */
+    (function (global) {
+      'use strict';
+
+      // ---- Configuration (edit these) ----
+      const CONFIG = {
+        // Provider: 'ollama' | 'openai' | 'rest' | 'demo'
+        provider: 'demo',
+
+        // Ollama (local): default http://localhost:11434
+        ollama: {
+          baseUrl: 'http://localhost:11434',
+          model:   'llama3.2',           // e.g. llama3.2, qwen2.5, mistral
+          stream:  true,
+        },
+
+        // OpenAI-compatible (also works for many self-hosted servers)
+        openai: {
+          baseUrl: 'https://api.openai.com/v1',
+          apiKey:  '',                    // <<< set your key (server-side ideally)
+          model:   'gpt-4o-mini',
+          stream:  true,
+        },
+
+        // Generic REST: expects { reply: "..." } or plain text
+        rest: {
+          url:    'https://your-api.example.com/chat',
+          stream: false,
+        },
+      };
+
+      // Expose for debugging: window.FlyAI.config
+      global.FlyAI = global.FlyAI || {};
+      global.FlyAI.config = CONFIG;
+
+      /**
+       * Central request function — called by the chat UI.
+       * @param {string} prompt - user message
+       * @returns {Promise<string> | AsyncIterable<string> | ReadableStream}
+       */
+      async function askAI(prompt) {
+        switch (CONFIG.provider) {
+          case 'ollama':  return ollamaRequest(prompt);
+          case 'openai':  return openaiRequest(prompt);
+          case 'rest':    return restRequest(prompt);
+          case 'demo':
+          default:        return demoRequest(prompt);
+        }
+      }
+
+      global.FlyAI.askAI = askAI;
+
+      // ---------------------------------------------------------------
+      // 1) LOCAL OLLAMA
+      //    Docs: https://github.com/ollama/ollama/blob/main/docs/api.md
+      //    Supports native streaming via fetch + ReadableStream.
+      // ---------------------------------------------------------------
+      async function ollamaRequest(prompt) {
+        const { baseUrl, model, stream } = CONFIG.ollama;
+        const url = baseUrl.replace(/\/$/, '') + '/api/chat';
+
+        const body = {
+          model,
+          stream,
+          messages: [{ role: 'user', content: prompt }],
+        };
+
+        const res = await fetch(url, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(body),
+        });
+
+        if (!res.ok) {
+          throw new Error('Ollama error ' + res.status + ': ' + (await res.text()));
+        }
+
+        if (stream && res.body) {
+          // Return the raw stream; toAsyncIterable() in the UI will consume it.
+          return res.body;
+        }
+
+        const data = await res.json();
+        return (data && data.message && data.message.content) || '';
+      }
+
+      // ---------------------------------------------------------------
+      // 2) OPENAI-COMPATIBLE API (streaming)
+      // ---------------------------------------------------------------
+      async function openaiRequest(prompt) {
+        const { baseUrl, apiKey, model, stream } = CONFIG.openai;
+        const url = baseUrl.replace(/\/$/, '') + '/chat/completions';
+
+        const res = await fetch(url, {
+          method:  'POST',
+          headers: {
+            'Content-Type':  'application/json',
+            'Authorization': 'Bearer ' + apiKey,
+          },
+          body: JSON.stringify({
+            model,
+            stream,
+            messages: [{ role: 'user', content: prompt }],
+          }),
+        });
+
+        if (!res.ok) {
+          throw new Error('API error ' + res.status + ': ' + (await res.text()));
+        }
+
+        if (stream && res.body) {
+          // Transform SSE "data: {...}" chunks into plain text deltas
+          return openAIStreamToText(res.body);
+        }
+
+        const data = await res.json();
+        return data.choices?.[0]?.message?.content || '';
+      }
+
+      // Convert OpenAI SSE stream → async iterable of text chunks
+      async function* openAIStreamToText(readableStream) {
+        const reader = readableStream.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+
+          // SSE events are separated by \n\n
+          let idx;
+          while ((idx = buffer.indexOf('\n\n')) !== -1) {
+            const event = buffer.slice(0, idx);
+            buffer = buffer.slice(idx + 2);
+
+            for (const line of event.split('\n')) {
+              const trimmed = line.trim();
+              if (!trimmed.startsWith('data:')) continue;
+              const payload = trimmed.slice(5).trim();
+              if (payload === '[DONE]') return;
+              try {
+                const json = JSON.parse(payload);
+                const delta = json.choices?.[0]?.delta?.content;
+                if (delta) yield delta;
+              } catch (_) { /* ignore malformed event */ }
+            }
+          }
+        }
+      }
+
+      // ---------------------------------------------------------------
+      // 3) GENERIC REST ENDPOINT (non-streaming)
+      // ---------------------------------------------------------------
+      async function restRequest(prompt) {
+        const res = await fetch(CONFIG.rest.url, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ prompt, message: prompt }),
+        });
+        if (!res.ok) throw new Error('REST error ' + res.status);
+
+        const data = await res.json();
+        return data.reply || data.response || data.message || data.text || JSON.stringify(data);
+      }
+
+      // ---------------------------------------------------------------
+      // 4) DEMO FALLBACK (works offline — no server required)
+      //    Replace with a real provider when ready.
+      // ---------------------------------------------------------------
+      async function* demoRequest(prompt) {
+        const reply = generateDemoReply(prompt);
+        const chunks = reply.match(/.{1,12}/g) || [reply]; // simulate streaming
+        for (const chunk of chunks) {
+          await sleep(40);
+          yield chunk;
+        }
+      }
+
+      function generateDemoReply(text) {
+        const replies = [
+          "I can help with visa, flight, and business setup inquiries. What would you like to know?",
+          "For Dubai/UAE visas, processing typically takes 24–48 hours. Would you like to start an application?",
+          "We cover tourist, freelance, and business visas for Dubai, China, Malaysia, and Vietnam. Which destination interests you?",
+          "You can apply for e-Visa, residency ID, or business setup through our platform. Let me know your destination.",
+          "Feel free to ask about flight bookings, eSIM deals, or virtual card services too!"
+        ];
+        const lower = text.toLowerCase();
+        if (lower.includes('visa') || lower.includes('dubai') || lower.includes('uae')) {
+          return "For UAE/Dubai visas, we offer 30/60-day tourist e-Visas with 24–48h processing. Would you like to start an application?";
+        }
+        if (lower.includes('flight') || lower.includes('ticket')) {
+          return "I can help you search and compare flights. Please share your departure city and destination.";
+        }
+        if (lower.includes('esim') || lower.includes('sim')) {
+          return "We offer eSIM deals for 100+ countries. Check the eSIM button in the hero section for current promotions.";
+        }
+        if (lower.includes('pay') || lower.includes('card')) {
+          return "Jingpay virtual cards are available. Would you like me to share the signup link?";
+        }
+        return replies[Math.floor(Math.random() * replies.length)];
+      }
+
+      function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+    })(window);
+  </script>
+</body>
+</html>
