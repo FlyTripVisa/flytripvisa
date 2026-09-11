@@ -1,7 +1,7 @@
 # FlyTripVisa
 
 AI-powered online visa application platform.  
-Frontend (HTML/CSS/JS) + Cloudflare Worker backend (D1 + AI Gateway) with **Telegram + Email notifications**.
+Frontend (HTML/CSS/JS) + Cloudflare Worker backend (D1 + R2 + AI Gateway) with **Telegram + Email notifications**.
 
 ## Folder Structure
 
@@ -77,8 +77,8 @@ All notifications go to your Telegram chat + `visa@flytripvisa.site`.
 
 ## Default Admin
 
-- Username: `admin`
-- Password: `admin123` (change after first login!)
+- Username: `****`
+- Password: `*****` (change after first login!)
 
 ---
 © 2026 FLYTRIPVISA | 飞行旅行签证
