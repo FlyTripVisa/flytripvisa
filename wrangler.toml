@@ -27,3 +27,4 @@ wrangler secret put TG_BOT_TOKEN
 wrangler secret put TG_CHAT_ID
 
 wrangler secret put SMTP_TO
+
