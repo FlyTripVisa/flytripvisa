@@ -1,0 +1,31 @@
+name = "flytripvisa"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+AI_PROVIDER = "cloudflare"
+AI_GATEWAY_NAME = "kimik2"
+APP_URL = "https://flytripvisa.site"
+ENVIRONMENT = "production"
+OLLAMA_MODEL = "llama3.1"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "flytripvisa"
+database_id = "f274effd-ff6e-4c75-b8a8-4083726232fe"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "55384fd25e174d69ad17b3cb1b576ab7"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "flytripvisa-media"
+
+[assets]
+directory = "mcp/dist"
+binding = "ASSETS"

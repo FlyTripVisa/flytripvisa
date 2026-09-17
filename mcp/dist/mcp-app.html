@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>FlyTripVisa — MCP App</title>
+<style>
+:root{--bg-primary:#0a0a0f;--bg-card:#1a1a26;--purple:#7c3aed;--purple-light:#a78bfa;--gold:#f59e0b;--gold-light:#fcd34d;--text-primary:#f1f5f9;--text-secondary:#94a3b8;--border:#2a2a3a;--success:#10b981;--radius:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh}
+.container{max-width:480px;margin:0 auto;padding:16px}
+.header{text-align:center;padding:24px 16px;background:linear-gradient(135deg,var(--purple),#5b21b6);border-radius:var(--radius);margin-bottom:20px;border:1px solid var(--purple-light)}
+.header h1{font-size:1.5rem;font-weight:700;color:var(--gold-light);margin-bottom:4px}
+.header p{color:var(--purple-light);font-size:.85rem}
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px}
+.card h2{font-size:1rem;color:var(--gold-light);margin-bottom:12px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:.8rem;color:var(--text-secondary);margin-bottom:4px;font-weight:500}
+.field input,.field select{width:100%;padding:12px;background:#12121a;border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-size:1rem}
+.field input:focus,.field select:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.2)}
+.btn{width:100%;padding:14px;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-primary{background:linear-gradient(135deg,var(--purple),#5b21b6);color:#fff}
+.btn-primary:active{transform:scale(.98)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#d97706);color:#fff;margin-top:8px}
+.status-badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:.75rem;font-weight:600;margin-top:8px}
+.status-ok{background:rgba(16,185,129,.2);color:var(--success)}
+.checklist{list-style:none}.checklist li{padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;font-size:.9rem}
+.checklist li:last-child{border-bottom:none}.checklist input[type=checkbox]{width:18px;height:18px;accent-color:var(--purple)}
+.section-title{font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-secondary);margin:20px 0 8px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header"><h1>🛂 FlyTripVisa</h1><p>MCP App · Visa Application Assistant</p><span class="status-badge status-ok">● Online</span></div>
+<div class="card"><h2>📋 Visa Application</h2>
+<div class="field"><label>Destination Country</label><select id="country"><option value="">Select…</option><option value="USA">USA</option><option value="UK">UK</option><option value="UAE">UAE</option><option value="SCHENGEN">Schengen</option><option value="CANADA">Canada</option><option value="AUSTRALIA">Australia</option><option value="JAPAN">Japan</option></select></div>
+<div class="field"><label>Visa Type</label><select id="visaType"><option value="tourist">Tourist</option><option value="business">Business</option><option value="transit">Transit</option><option value="student">Student</option></select></div>
+<div class="field"><label>Applicant Name</label><input type="text" id="applicantName" placeholder="Full legal name"></div>
+<div class="field"><label>Nationality</label><input type="text" id="nationality" placeholder="Country of citizenship"></div>
+<div class="field"><label>Passport Number</label><input type="text" id="passport" placeholder="Passport number"></div>
+<div class="field"><label>Travel Date</label><input type="date" id="travelDate"></div>
+<div class="field"><label>Return Date</label><input type="date" id="returnDate"></div>
+<button class="btn btn-primary" onclick="checkRequirements()">Check Requirements</button>
+</div>
+<div class="section-title">Document Checklist</div>
+<div class="card"><ul class="checklist" id="checklist">
+<li><input type="checkbox"> Valid passport (6+ months)</li>
+<li><input type="checkbox"> Application form</li>
+<li><input type="checkbox"> Photos</li>
+<li><input type="checkbox"> Itinerary</li>
+<li><input type="checkbox"> Accommodation proof</li>
+<li><input type="checkbox"> Bank statements</li>
+<li><input type="checkbox"> Travel insurance</li>
+<li><input type="checkbox"> Fee receipt</li>
+</ul></div>
+<div class="section-title">AI Assistant</div>
+<div class="card"><div class="field"><label>Ask about visa requirements</label><input type="text" id="aiQuery" placeholder="e.g. UAE tourist visa docs?"></div>
+<button class="btn btn-primary" onclick="askAI()">Ask AI</button>
+<div id="aiResponse" style="margin-top:12px;font-size:.85rem;color:var(--text-secondary)"></div>
+</div>
+<p style="text-align:center;color:var(--text-secondary);font-size:.7rem;padding:20px 0">FlyTripVisa MCP App · Secured by Cloudflare</p>
+</div>
+<script>
+async function checkRequirements(){const c=document.getElementById('country').value;if(!c){alert('Select country');return}
+const r=await fetch('/mcp',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({tool:'visa-application',args:{action:'list_requirements',country:c,visa_type:document.getElementById('visaType').value}})});
+const d=await r.json();if(d.result&&d.result.requirements)document.getElementById('checklist').innerHTML=d.result.requirements.map(x=>'<li><input type="checkbox"> '+x+'</li>').join('')}
+async function askAI(){const q=document.getElementById('aiQuery').value;if(!q)return;document.getElementById('aiResponse').textContent='Thinking…';const r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:[{role:'user',content:q}]})});const d=await r.json();document.getElementById('aiResponse').textContent=d.result?.response||JSON.stringify(d)}
+</script>
+</body>
+</html>
