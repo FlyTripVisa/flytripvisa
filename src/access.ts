@@ -1,22 +1,24 @@
 import { jwtVerify, createRemoteJWKSet } from "jose";
 
-const TEAM_DOMAIN = "https://flytripvisa.cloudflareaccess.com";
-const POLICY_AUD = "7bb6591ac02b3a10297cd5efde72713ea24580edf39d687882ab37be3897be61";
-
-const JWKS = createRemoteJWKSet(new URL(`${TEAM_DOMAIN}/cdn-cgi/access/certs`));
-
 export interface AccessIdentity {
   email?: string;
   idp?: string;
 }
 
-export async function getAccessIdentityFromJwt(request: Request): Promise<AccessIdentity | null> {
+export async function getAccessIdentityFromJwt(request: Request, env: Env): Promise<AccessIdentity | null> {
   const token = request.headers.get("cf-access-jwt-assertion");
   if (!token) return null;
+
+  const teamDomain = env.CF_ACCESS_TEAM_DOMAIN || "https://flytripvisa.cloudflareaccess.com";
+  const policyAud = env.CF_ACCESS_AUD;
+  if (!policyAud) return null;
+
+  const JWKS = createRemoteJWKSet(new URL(`${teamDomain}/cdn-cgi/access/certs`));
+
   try {
     const { payload } = await jwtVerify(token, JWKS, {
-      issuer: TEAM_DOMAIN,
-      audience: POLICY_AUD,
+      issuer: teamDomain,
+      audience: policyAud,
     });
     return {
       email: payload.email as string | undefined,

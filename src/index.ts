@@ -33,7 +33,7 @@ export default {
 
     // 方式 A fallback: jose JWT 验证
     if (!userEmail) {
-      const jwtIdentity = await getAccessIdentityFromJwt(request);
+      const jwtIdentity = await getAccessIdentityFromJwt(request, env);
       if (jwtIdentity?.email) {
         userEmail = jwtIdentity.email;
         userIdp = jwtIdentity.idp || null;
