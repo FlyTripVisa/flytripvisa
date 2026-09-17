@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "flytripvisa",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "ENVIRONMENT": "production",
+    "APP_URL": "https://flytripvisa.site",
+    "AI_GATEWAY_ID": "kimik2",
+    "CLOUDFLARE_ACCOUNT_ID": "b73b80fa62deef032d3c08248cf2f30b"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "flytripvisa-db",
+      "database_id": "f274effd-ff6e-4c75-b8a8-4083726232fe"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "flytripvisa-media"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "55384fd25e174d69ad17b3cb1b576ab7"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  }
+}
