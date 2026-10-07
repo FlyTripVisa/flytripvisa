@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "flytripvisa-mcp-chat-ui",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "MUSE_API_URL": "https://YOUR-MUSE-ENDPOINT/v1/chat/completions",
+    "MUSE_MODEL": "YOUR_MUSE_MODEL",
+    "MUSE_API_STYLE": "openai",
+    "ALLOWED_ORIGIN": "https://flytripvisa.site",
+    "MCP_ENABLED": "false",
+    "MCP_SERVER_URL": ""
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "flytripvisa-mcp-chat-ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler types"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  }
+}

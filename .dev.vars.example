@@ -1,0 +1,11 @@
+# Copy to .dev.vars for local development.
+# Never commit real secrets.
+
+MUSE_API_KEY="replace-with-your-muse-key"
+MUSE_API_URL="https://YOUR-MUSE-ENDPOINT/v1/chat/completions"
+MUSE_MODEL="YOUR_MUSE_MODEL"
+MUSE_API_STYLE="openai"
+ALLOWED_ORIGIN="http://localhost:8787"
+MCP_ENABLED="false"
+MCP_SERVER_URL=""
+MCP_AUTH_TOKEN=""
